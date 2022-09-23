@@ -9,32 +9,6 @@ import cv2
 
 class Camera_Thread:
 
-    # IMPORTANT: a queue is much more efficient than a deque
-    # the queue version runs at 35% of 1 processor
-    # the deque version ran at 108% of 1 processor
-
-    # ------------------------------
-    # User Instructions
-    # ------------------------------
-
-    # Using the user variables (see below):
-    # Set the camera source number (default is camera 0).
-    # Set the camera pixel width and height (default is 640x480).
-    # Set the target (max) frame rate (default is 30).
-    # Set the number of frames to keep in the buffer (default is 4).
-    # Set buffer_all variable: True = no frame loss, for reading files, don't read another frame until buffer allows
-    #                          False = allows frame loss, for reading camera, just keep most recent frame reads
-
-    # Start camera thread using self.start().
-
-    # Get next frame in using self.next(black=True,wait=1).
-    #    If black, the default frame value is a black frame.
-    #    If not black, the default frame value is None.
-    #    If timeout, wait up to timeout seconds for a frame to load into the buffer.
-    #    If no frame is in the buffer, return the default frame value.
-
-    # Stop the camera using self.stop()
-
     # ------------------------------
     # User Variables
     # ------------------------------
@@ -216,5 +190,4 @@ class Camera_Thread:
             #print(traceback.format_exc())
             pass
 
-        # done
         return frame
